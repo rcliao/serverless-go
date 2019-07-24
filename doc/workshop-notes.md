@@ -65,3 +65,31 @@
 * Systems monitoring & deployment
 * Edge layer
 * Deployment approaches
+
+## What we will learn today
+
+* SAM (Serverless Application Model)
+    - Extension of CloudFormation
+    - Maintained by AWS, open source
+    - https://github.com/awslabs/serverless-application-model
+    - https://github.com/awslbs/aws-sam-cli
+* API Gateway
+* Step Functions
+* CloudWatch Metrics
+    - custom metrics
+* X-Ray
+* Lambda
+    - Test locally
+        * local development sucks
+    - function as service
+    - supports multiple language + custom runtimes
+* DynamoDB
+    - On demand capacity planning
+* SQS
+    - for decoupling components
+    - for async requests
+* "Shoutout"
+    - Slack API
+    - Slack Slash command
+
+
