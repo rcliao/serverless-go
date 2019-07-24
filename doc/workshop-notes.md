@@ -92,4 +92,6 @@
     - Slack API
     - Slack Slash command
 
+## lecture repo
 
+https://github.com/jboursiquot/serverless-go-orchestration-on-aws-course/wiki/Demo-and-walkthrough-of-the-serverless-app-architecture
