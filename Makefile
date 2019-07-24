@@ -7,9 +7,11 @@ deps:
 
 clean: 
 	rm -rf ./hello-world/hello-world
+	rm -rf ./go-proverbs/go-proverbs
 	
 build:
 	GOOS=linux GOARCH=amd64 go build -o hello-world/hello-world ./hello-world
+	GOOS=linux GOARCH=amd64 go build -o go-proverbs/go-proverbs ./go-proverbs
 
 bucket:
 	aws s3 mb s3://$(BUCKET)
@@ -22,10 +24,10 @@ package:
 deploy:
 	sam deploy \
 		--template-file packaged.yaml \
-		--stack-name $(STACK) \
+		--stack-name $(STACKNAME) \
 		--capabilities CAPABILITY_IAM
 
 get-deploy:
 	aws cloudformation describe-stacks \
-		--stack-name $(STACK) \
+		--stack-name $(STACKNAME) \
 		--query 'Stacks[].Outputs'
